@@ -31,7 +31,7 @@ public class PlayGame extends Game
          System.out.println(c);
       }
       System.out.println("-----------1--------------");
-      for (int i = 0; i < deck.getSize() / 2; i++) {
+      for (int i = 0; i < 26; i++) {
 
          p1.takeCard(deck.getAndRemove());
 
@@ -52,8 +52,8 @@ public class PlayGame extends Game
          CompleteCard c1 = p1.move();
          CompleteCard c2 = p2.move();
          System.out.println("-----------------------------------------------------");
-         System.out.println(p1.getPlayerID() + " got " + c1 + " card  " + p1.handSize());
-         System.out.println(p2.getPlayerID() + " got " + c2 + " card  " + p2.handSize());
+         System.out.println(p1.getPlayerID() + " got " + c1 + " card,  " + p1.getPlayerID() + " has " + p1.handSize() + "Cards left");
+         System.out.println(p2.getPlayerID() + " got " + c2 + " card,  " + p1.getPlayerID() + " has " + p2.handSize() + "Cards left");
          if (c1.compare(c2) > 0) {
             p1.takeCard(c1);
             p1.takeCard(c2);
